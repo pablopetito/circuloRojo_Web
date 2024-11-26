@@ -8,4 +8,74 @@ header {
     top: 0; /* Posicionamos la cabecera pegada arriba */
     position: fixed; /* Hacemos que la cabecera tenga una posición fija */
     z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9); /* Sombra más clara y visible */
+}
+
+.fondoImagenPrincipal::before {
+    content: ''; /* Necesario para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./imagenes/digital-marketing-and-seo.jpg'); /* Ruta relativa al archivo CSS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1; /* Cambia la opacidad aquí (0.0 a 1.0) */
+    z-index: -1; /* Coloca el fondo detrás del contenido del div */
+  }
+
+  .fondoImagenPrincipal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Asegura que nada sobresalga del div */
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 4px black; /* Sombra negra */
+  }
+
+.contenido {
+    position: relative; /* Asegura que el contenido esté encima del fondo */
+    z-index: 1; /* Superior al pseudo-elemento */
+}
+
+.tarjetaObalo {
+    height: 300px;
+    width: 300px;
+    border-radius: 70%;
+    background-color: rgb(127, 5, 5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9); /* Sombra más clara y visible */
+    margin-top: 60px;
+}
+
+.tarjetaBlanca {
+    border: 1px solid rgb(127, 5, 5);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.tarjetaRoja {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: rgb(127, 5, 5);
+}
+
+.textoDiagonal {
+    display: inline-block; /* Necesario para aplicar transform */
+    transform: rotate(-15deg); /* Ajusta el ángulo según lo que necesites */
+    transform-origin: top left; /* Opcional: ajusta el punto de rotación */
+    font-size: 80px;
+    font-weight: bolder;
+    margin-top: 150px;
+}
+
+.textoPrincipal {
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.img-tablero {
+    width: 300px;
+    height: 150px;
 }
